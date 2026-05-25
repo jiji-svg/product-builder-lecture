@@ -67,7 +67,13 @@ async function handleImageUpload(event) {
 async function predict(imgElement) {
     const prediction = await model.predict(imgElement);
     for (let i = 0; i < maxPredictions; i++) {
-        const classTitle = prediction[i].className === "Dog" ? "강아지상" : "고양이상";
+        let classTitle = prediction[i].className;
+        if (classTitle.toLowerCase().includes("dog") || classTitle.includes("강아지")) {
+            classTitle = "강아지상";
+        } else if (classTitle.toLowerCase().includes("cat") || classTitle.includes("고양이")) {
+            classTitle = "고양이상";
+        }
+        
         const probability = (prediction[i].probability * 100).toFixed(0);
         
         const barFill = labelContainer.childNodes[i].querySelector('.bar-fill');
