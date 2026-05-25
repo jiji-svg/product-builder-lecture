@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>럭키 로또 - 행운의 번호 추첨기</title>
+    <title>동물상 테스트 - 내 동물상은?</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,22 +11,22 @@
         <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
         
         <header>
-            <h1>럭키 로또</h1>
-            <p class="subtitle">오늘의 행운을 잡으세요! 6개의 번호를 추첨합니다.</p>
+            <a href="index.html" class="back-link">← 메인으로 돌아가기 (로또 번호 추첨)</a>
+            <h1>동물상 테스트</h1>
+            <p class="subtitle">사진을 업로드하여 분석하는 나의 동물상</p>
         </header>
 
-        <div class="lotto-section">
-            <div class="lotto-balls" id="lotto-container">
-                <div class="ball">?</div>
-                <div class="ball">?</div>
-                <div class="ball">?</div>
-                <div class="ball">?</div>
-                <div class="ball">?</div>
-                <div class="ball">?</div>
+        <div class="test-section">
+            <div id="image-container">
+                <img id="face-image" src="#" alt="your image" style="display:none; max-width: 100%; max-height: 100%; border-radius: 15px;" />
+                <div id="upload-placeholder">사진을 업로드해주세요</div>
             </div>
-            <button type="button" id="lotto-btn" onclick="generateLotto()">번호 추첨하기</button>
-            <br>
-            <a href="animal_test.html" class="animal-test-link">내 동물상 테스트 하러가기 →</a>
+            <div id="label-container"></div>
+            
+            <input type="file" id="image-upload" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
+            <button type="button" id="upload-btn" onclick="document.getElementById('image-upload').click()">사진 선택하기</button>
+            
+            <div id="loading" style="display: none;">모델을 불러오는 중...</div>
         </div>
         
         <hr class="separator">
@@ -55,7 +55,9 @@
         <div id="disqus_thread"></div>
     </div>
 
-    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <script src="animal_test.js"></script>
     <script>
         (function() {
         var d = document, s = d.createElement('script');
