@@ -19,6 +19,27 @@
             <span class="number"></span>
         </div>
         <button id="generate">Generate Numbers</button>
+        
+        <hr class="separator">
+
+        <div class="affiliate-section">
+            <h2>제휴 문의</h2>
+            <form action="https://formspree.io/f/xaqkdapv" method="POST" id="affiliate-form">
+                <div class="form-group">
+                    <label for="name">성함 / 업체명</label>
+                    <input type="text" id="name" name="name" placeholder="성함 또는 업체명을 입력해주세요" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">이메일</label>
+                    <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">문의 내용</label>
+                    <textarea id="message" name="message" rows="4" placeholder="문의하실 내용을 입력해주세요" required></textarea>
+                </div>
+                <button type="submit" id="submit-btn">문의하기</button>
+            </form>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>
