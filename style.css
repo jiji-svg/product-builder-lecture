@@ -1,3 +1,19 @@
+:root {
+    --bg-gradient-start: #a18cd1;
+    --bg-gradient-end: #fbc2eb;
+    --container-bg: #fff;
+    --text-color: #333;
+    --shadow-color: rgba(0,0,0,0.1);
+}
+
+body.dark-mode {
+    --bg-gradient-start: #2c3e50;
+    --bg-gradient-end: #000000;
+    --container-bg: #1a1a1a;
+    --text-color: #f0f2f5;
+    --shadow-color: rgba(255,255,255,0.05);
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f2f5;
@@ -6,21 +22,25 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    background-image: linear-gradient(to top, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
+    transition: background-image 0.3s ease;
 }
 
 .container {
     text-align: center;
-    background-color: #fff;
+    background-color: var(--container-bg);
     padding: 40px;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 20px var(--shadow-color);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
 h1 {
     margin-bottom: 30px;
-    color: #333;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px var(--shadow-color);
+    transition: color 0.3s ease;
 }
 
 .lotto-numbers {
@@ -68,6 +88,23 @@ h1 {
 #generate:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
+}
+
+#theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: var(--shadow-color);
 }
 
 @keyframes popIn {
