@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-55PV2XVGQ6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -9,52 +8,9 @@
       gtag('js', new Date());
       gtag('config', 'G-55PV2XVGQ6');
     </script>
-    <meta name="google-adsense-account" content="ca-pub-3456978380293158">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3456978380293158" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "x0lwvn9nak");
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI 동물상 분석 | 딥러닝 인공지능 안면 인식 연구</title>
-    <meta name="description" content="단순한 재미를 넘어 딥러닝 기반의 안면 인식 기술과 인류학적 관상을 연구합니다. AI가 분석하는 당신의 동물상 결과와 그 기술적 배경을 탐구해보세요.">
-    <meta name="keywords" content="동물상분석, AI안면인식, 딥러닝테스트, 컴퓨터비전, 관상학, 테슬라머신러닝">
-    <link rel="canonical" href="https://luckylotto.research/animal_test.html">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://luckylotto.research/animal_test.html">
-    <meta property="og:title" content="AI 동물상 분석 | 딥러닝 인공지능 안면 인식 연구">
-    <meta property="og:description" content="인공지능 딥러닝 모델을 활용하여 인상의 특징을 동물 형상과 매칭합니다. 당신의 동물상을 분석해보세요.">
-    <meta property="og:image" content="https://luckylotto.research/og-animal.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://luckylotto.research/animal_test.html">
-    <meta property="twitter:title" content="AI 동물상 분석 | 딥러닝 인공지능 안면 인식 연구">
-    <meta property="twitter:description" content="인공지능 딥러닝 모델을 활용하여 인상의 특징을 동물 형상과 매칭합니다. 당신의 동물상을 분석해보세요.">
-    <meta property="twitter:image" content="https://luckylotto.research/og-animal.jpg">
-
-    <!-- Structured Data (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "AI 동물상 분석",
-      "operatingSystem": "Web",
-      "applicationCategory": "EntertainmentApplication",
-      "description": "딥러닝 기반의 안면 인식 기술을 활용한 동물상 분석 도구입니다.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "KRW"
-      }
-    }
-    </script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon-animal.svg" type="image/svg+xml">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
@@ -65,8 +21,7 @@
             <a href="index.html" class="logo" aria-label="럭키 로또 연구소 홈">🍀 럭키 로또 연구소</a>
             <div class="nav-links">
                 <a href="index.html">홈</a>
-                <a href="projects.html">전체 프로젝트</a>
-                <a href="animal_test.html">AI 동물상 분석</a>
+                <a href="wisdom.html">명언 연구소</a>
                 <a href="about.html">연구소 소개</a>
                 <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
             </div>
@@ -79,7 +34,7 @@
             <p class="subtitle">인공지능 딥러닝 모델을 활용하여 인상의 특징을 동물 형상과 매칭합니다.</p>
         </header>
 
-        <section class="tool-box">
+        <section class="tool-box" style="text-align: center;">
             <div id="image-container">
                 <img id="face-image" src="#" alt="your image" style="display:none; max-width: 100%; max-height: 100%;" />
                 <div id="upload-placeholder" style="text-align: center; color: var(--text-muted);">
@@ -88,63 +43,15 @@
                 </div>
             </div>
             <div id="label-container" style="margin-bottom: 30px;"></div>
-            
             <input type="file" id="image-upload" accept="image/*" style="display: none;" onchange="handleImageUpload(event)">
             <button type="button" class="cta-button" onclick="document.getElementById('image-upload').click()">사진 선택 및 분석 시작</button>
             <div id="loading" style="display: none; margin-top: 20px; font-weight: 500;">AI 모델 분석 중...</div>
         </section>
-
-        <article class="article-section">
-            <h2>안면 인식 기술과 딥러닝의 진화</h2>
-            <div class="article-grid">
-                <div class="article-card">
-                    <h3>CNN(합성곱 신경망)의 원리</h3>
-                    <p>본 서비스의 핵심은 CNN 알고리즘에 있습니다. CNN은 인간의 시각 피질이 사물을 인식하는 방식을 모방하여, 이미지에서 엣지, 질감, 특징점을 단계적으로 추출합니다. AI 모델은 수만 장의 동물상 데이터를 학습하여, 인간 얼굴의 미세한 특징을 특정 동물 카테고리와 확률적으로 매칭합니다.</p>
-                </div>
-                <div class="article-card">
-                    <h3>컴퓨터 비전의 미래</h3>
-                    <p>컴퓨터 비전 기술은 이제 단순한 분류를 넘어 감정 인식, 생체 인증, 자율 주행의 핵심 기술로 발전하고 있습니다. 동물상 테스트는 이러한 복잡한 기술을 대중이 친숙하게 접할 수 있도록 설계된 '엔터테인먼트형 AI'의 좋은 예시입니다.</p>
-                </div>
-                <div class="article-card">
-                    <h3>Teachable Machine의 활용</h3>
-                    <p>우리는 구글의 오픈소스 머신러닝 라이브러리인 TensorFlow.js 기반의 Teachable Machine 모델을 활용합니다. 이는 서버를 거치지 않고 브라우저 내에서 직접 분석을 수행하므로, 사용자의 이미지가 외부로 유출되지 않는 강력한 보안성을 보장합니다.</p>
-                </div>
-            </div>
-        </article>
-
-        <article class="article-section">
-            <h2>인상학적 관점에서의 동물상</h2>
-            <div class="article-card" style="margin-bottom: 30px;">
-                <h3>동물상 매칭의 인류학적 유래</h3>
-                <p>동물상이라는 개념은 고대 관상학(Physiognomy)에서 시작되었습니다. 사람의 생김새를 특정 동물에 비유하여 성격과 기질을 유추하는 기법입니다. 현대에 들어서는 과학적 근거보다는 재미와 심리적 친밀감을 형성하는 도구로 활용되고 있으며, 특히 동양 문화권에서는 인상을 결정짓는 중요한 요소 중 하나로 여겨집니다.</p>
-            </div>
-            <div class="article-grid">
-                <div class="article-card">
-                    <h3>강아지상과 고양이상의 대조</h3>
-                    <p>강아지상은 전반적으로 둥근 곡선 위주의 이목구비를 가져 친근함과 사회성을 상징하는 반면, 고양이상은 날렵한 선과 상향된 눈매를 통해 세련미와 독립적인 이미지를 강조합니다. 이러한 구분은 현대 대중문화와 마케팅에서도 캐릭터 구축의 중요한 지표로 사용됩니다.</p>
-                </div>
-                <div class="article-card">
-                    <h3>새로운 유형: 공룡상과 곰상</h3>
-                    <p>최근에는 전통적인 구분에서 벗어나 공룡상(강한 골격과 카리스마)이나 곰상(듬직하고 푸근한 인상)과 같은 새로운 유형들이 대두되고 있습니다. 이는 미의 기준이 다양해지고 개성을 존중하는 사회적 분위기가 투영된 결과입니다.</p>
-                </div>
-            </div>
-        </article>
-
-        <article class="article-section">
-            <h2>연구소의 데이터 철학</h2>
-            <div class="article-card">
-                <h3>편향성 없는 인공지능</h3>
-                <p>인공지능 모델의 데이터 편향성은 매우 중요한 윤리적 문제입니다. 저희 연구소는 다양한 인종, 연령, 성별의 데이터를 균형 있게 학습시키기 위해 노력하며, AI 분석 결과가 어떤 고정관념을 강화하지 않도록 기술적인 검토를 지속하고 있습니다. 여러분의 결과는 단순한 참고용이며, 각자가 가진 고유한 매력을 발견하는 계기가 되길 바랍니다.</p>
-            </div>
-        </article>
-
-        <div id="disqus_thread" style="margin-top: 60px;"></div>
     </div>
 
     <footer class="site-footer">
         <div class="footer-links">
             <a href="index.html">홈</a>
-            <a href="animal_test.html">AI 동물상 분석</a>
             <a href="about.html">연구소 소개</a>
             <a href="privacy.html">개인정보처리방침</a>
             <a href="terms.html">이용약관</a>
@@ -155,13 +62,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
     <script src="animal_test.js"></script>
-    <script>
-        (function() {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://productbuilder-akhocdyog4.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-    </script>
 </body>
 </html>
